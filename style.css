@@ -1,0 +1,353 @@
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps principal */
+body {
+    background-color: #f8f4ec; /* Couleur d'arrière-plan douce et subtile */
+    font-family: 'Lora', serif;
+    line-height: 1.8;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* En-tête */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #ffffff;
+    color: #1f2937;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 75px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e67e22;
+}
+
+/* Section Accueil */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: #f8f4ec;
+    color: #1f2937;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #5a5a5a;
+    max-width: 600px;
+}
+
+.cta-button {
+    padding: 12px 30px;
+    background-color: #e67e22;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #cf6d1f;
+    transform: scale(1.05);
+}
+
+/* Section Services */
+.services {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    gap: 20px;
+}
+
+.service:nth-child(even) {
+    flex-direction: row-reverse; /* Inverser pour les services pairs */
+}
+
+.service-photo {
+    flex: 1;
+}
+
+.service-photo img {
+    width: 100%;
+    max-width: 350px; /* Limite maximale pour les grandes images */
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+.service-text {
+    flex: 1;
+    text-align: left;
+}
+
+.service-text h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #1f2937;
+    font-weight: bold;
+}
+
+.service-text p {
+    font-size: 1rem;
+    color: #5a5a5a;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 100px;
+}
+
+.service-text .read-more {
+    color: #e67e22;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.service-text .read-more:hover {
+    color: #cf6d1f;
+}
+
+.service-text .full-text {
+    display: none;
+    margin-top: 15px;
+    color: #5a5a5a;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* Texte complet visible lorsque déplié */
+.service-text .full-text {
+    display: none;
+    margin-top: 15px;
+    color: #5a5a5a;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* Section Résultats */
+.results {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fafaf6;
+}
+
+.results h2 {
+    font-size: 2rem;
+    color: #1f2937;
+    margin-bottom: 40px;
+}
+
+.result-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.result-item {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 220px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.result-item:hover {
+    transform: translateY(-5px);
+    background-color: #e67e22;
+    color: #fff;
+}
+
+.result-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: inherit;
+}
+
+.result-item p {
+    font-size: 1rem;
+    color: inherit;
+}
+
+/* Formulaire de contact */
+.contact-form {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    border-top: 1px solid #e6e6e6;
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    max-width: 600px; /* Centrer et limiter la largeur */
+    margin: 0 auto; /* Centrer sur la page */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacement entre les champs */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form textarea {
+    resize: none; /* Désactiver le redimensionnement manuel */
+    height: 120px; /* Hauteur par défaut */
+}
+
+.contact-form button {
+    width: fit-content; /* Adapter la largeur au contenu */
+    align-self: center; /* Centrer le bouton */
+    padding: 12px 30px;
+    background-color: #1f2937;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.contact-form button:hover {
+    background-color: #495057;
+    transform: scale(1.05);
+}
+
+
+/* Pied de page */
+footer {
+    background-color: #1f2937;
+    color: #f8f9fa;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+footer .socials a {
+    color: #e67e22;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .socials a:hover {
+    color: #cf6d1f;
+    transform: scale(1.1);
+}
+
+/* Amélioration des sections et accordéon */
+.accordion-item {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.accordion-header {
+    background: #e67e22;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-item.active .accordion-header {
+    background: #cf6d1f;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 500px;
+    padding: 15px;
+}
+
+/* Boutons améliorés */
+.cta-button, .contact-form button {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    border: 0;
+    font-size: 1.1rem;
+}
+
